@@ -126,3 +126,19 @@ print(ans.reduce(0, +))
 let array = [1, 2, nil, 4, nil, 5, 6]
 let compactArray = array.compactMap { $0 }
 print(compactArray)
+
+
+// --------------------------------------------------------------- //
+// Stride
+// Move from one value to another by an increment
+for i in stride(from: 2, to: 20, by: 2) {
+    print(i, terminator: " ")
+}
+print()
+for i in stride(from: 20, to: 0, by: -2) {
+    print(i, terminator: " ")
+}
+print()
+for i in stride(from: 0, through: 10, by: 1) {
+    print(i, terminator: " ")
+}
