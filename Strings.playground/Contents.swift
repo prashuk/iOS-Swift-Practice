@@ -40,8 +40,9 @@ print(first + " " + second)
 
 // Working with Characters
 for c in "Hello" {
-    print(c)
+    print(c, terminator: " ")
 }
+print()
 let helloChar: [Character] = ["h", "e", "l", "l", "0"]
 String(helloChar)
 
@@ -84,8 +85,9 @@ hello[hello.index(startIndex, offsetBy: 1)]
 hello[hello.index(endIndex, offsetBy: -1)]
 
 for i in hello.indices {
-    print(hello[i])
+    print(hello[i], terminator: " ")
 }
+print()
 
 
 // Substring
@@ -114,3 +116,9 @@ let stars3 = stars2.replacingOccurrences(of: "ABC", with: "XYZ")
 let exmaple = "1 2 3 4 5 6"
 let stringToArray = exmaple.components(separatedBy: " ")
 let stringFromArray = stringToArray.joined(separator: ",")
+
+
+// Conversion
+let number = 20
+let numInString = String(number)
+let againToInt = Int(numInString)
