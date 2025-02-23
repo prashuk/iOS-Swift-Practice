@@ -82,7 +82,7 @@ hello[startIndex]
 hello[hello.index(after: startIndex)]
 hello[hello.index(before: endIndex)]
 hello[hello.index(startIndex, offsetBy: 1)]
-hello[hello.index(endIndex, offsetBy: -1)]
+hello[hello.index(endIndex, offsetBy: -2)]
 
 for i in hello.indices {
     print(hello[i], terminator: " ")
@@ -105,7 +105,7 @@ stars.insert("X", at: stars.index(stars.startIndex, offsetBy: 3))
 
 
 // Replace
-var stars2 = "***XYZ***"
+var stars2 = "***XYZ***XYZ"
 if let xyzRange = stars2.firstRange(of: "XYZ") {
   stars2.replaceSubrange(xyzRange, with: "ABC")
 }
@@ -118,7 +118,20 @@ let stringToArray = exmaple.components(separatedBy: " ")
 let stringFromArray = stringToArray.joined(separator: ",")
 
 
+/**
+ * str.index
+ * str.startIndex
+ * str.endIndex
+ * str.firstIndex
+ * str.firstRange
+ * str.replaceSubrange
+ * str.replacingOccurrences
+ * str.components
+ * str.joined
+ */
+
+
 // Conversion
-let number = 20
+let number = "20k"
 let numInString = String(number)
 let againToInt = Int(numInString)
